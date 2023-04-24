@@ -9,10 +9,9 @@ public class DeleteCargo {
         CargoDAO dao = new CargoDAO();
         Cargo cargo = new Cargo();
 
-        cargo.setCargo_id(10);
+        cargo.setCargo_id(9);
 
         dao.delete(cargo);
-
 
     }
 }
