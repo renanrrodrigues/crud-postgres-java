@@ -7,7 +7,7 @@ public class ConnectionFactory {
 
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "t00r";
-    private static final String DATABASE_URL = "jdbc:postgresql://172.17.0.2:5432/sistema";
+    private static final String DATABASE_URL = "jdbc:postgresql://172.17.0.3:5432/sistema";
 
     public static Connection createConnectionToPostgreSQL() throws Exception {
 

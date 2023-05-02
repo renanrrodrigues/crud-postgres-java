@@ -3,6 +3,8 @@ package br.com.sistema.model;
 public class Cargo {
 
     int cargo_id;
+    String nome_cargo;
+    Boolean status;
 
     public int getCargo_id() {
         return cargo_id;
@@ -12,8 +14,7 @@ public class Cargo {
         this.cargo_id = cargo_id;
     }
 
-    String nome_cargo;
-    Boolean status;
+
 
     public String getNome_cargo() {
         return nome_cargo;

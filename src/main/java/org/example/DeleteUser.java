@@ -9,7 +9,7 @@ public class DeleteUser {
         UserDAO dao = new UserDAO();
         Usuario user = new Usuario();
 
-        user.setId(5);
+        user.setId(8);
 
         dao.delete(user);
     }

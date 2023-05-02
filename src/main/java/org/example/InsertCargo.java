@@ -14,8 +14,8 @@ public class InsertCargo {
 
         Cargo cargo = new Cargo();
 
-        cargo.setNome_cargo("Jardinagem");
-        cargo.setStatus(false);
+        cargo.setNome_cargo("Manutenção");
+        cargo.setStatus(true);
 
         dao.save(cargo);
 

@@ -11,8 +11,8 @@ public class InsertRelacioCargoUser {
         UserCargo userCargo = new UserCargo();
 
 
-        userCargo.setUsuario_id(8);
-        userCargo.setCargo_id(11);
+        userCargo.setUsuario_id(23);
+        userCargo.setCargo_id(15);
 
         dao.save(userCargo);
 

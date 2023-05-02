@@ -13,8 +13,8 @@ public class InsertUser {
 
         Usuario usuario = new Usuario();
 
-        usuario.setNome("Renan");
-        usuario.setNickname("renan88");
+        usuario.setNome("Marcos");
+        usuario.setNickname("marcos123");
         usuario.setSenha(faker.internet().password());
         usuario.setNivel(String.valueOf(faker.random().nextInt(1, 3)));
 

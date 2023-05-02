@@ -51,9 +51,9 @@ public class UserCargoDAO {
     public List<UserCargo> viewCargosUsers() {
 
         //String sql = "SELECT * FROM usuario_cargo";
-
-        String sql = "SELECT usuario.nome, cargo.nome, usuario_cargo.usuario_id, usuario_cargo.cargo_id FROM usuario_cargo INNER JOIN usuario ON usuario_cargo.usuario_id = usuario.id INNER JOIN cargo ON usuario_cargo.cargo_id = cargo.id";
-
+        // String sql = "SELECT usuario.nome, cargo.nome, usuario_cargo.usuario_id, usuario_cargo.cargo_id FROM usuario_cargo INNER JOIN usuario ON usuario_cargo.usuario_id = usuario.id INNER JOIN cargo ON usuario_cargo.cargo_id = cargo.id";
+        // String sql = "SELECT usuario.nome, cargo.nome, usuario_cargo.usuario_id, usuario_cargo.cargo_id FROM usuario_cargo INNER JOIN usuario ON usuario_cargo.usuario_id = usuario.id INNER JOIN cargo ON usuario_cargo.cargo_id = cargo.id ORDER BY usuario.nome ASC";
+        String sql = "SELECT usuario.nome, cargo.nome as cargo, usuario_cargo.usuario_id, usuario_cargo.cargo_id FROM usuario_cargo INNER JOIN usuario ON usuario_cargo.usuario_id = usuario.id INNER JOIN cargo ON usuario_cargo.cargo_id = cargo.id ORDER BY usuario.nome ASC, cargo.nome ASC";
         Connection conn = null;
         PreparedStatement pstm = null;
         ResultSet rset = null;
@@ -70,8 +70,10 @@ public class UserCargoDAO {
                 Cargo cargo = new Cargo();
                 Usuario usuario = new Usuario();
 
-                usuario.setNome(rset.getString("nome"));
-                cargo.setNome_cargo(rset.getString("nome"));
+                //usuario.setNome(rset.getString("nome"));
+                //cargo.setNome_cargo(rset.getString("nome"));rset = {PgResultSet@1831}
+                userCargo.setNome(rset.getString("nome"));
+                userCargo.setCargo(rset.getString("cargo"));
                 userCargo.setUsuario_id(rset.getInt("usuario_id"));
                 userCargo.setCargo_id(rset.getInt("cargo_id"));
 
